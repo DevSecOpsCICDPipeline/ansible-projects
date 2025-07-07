@@ -1,0 +1,10 @@
+# su - root
+# /ect/ansible/playbooks
+# cd /ect/ansible/playbooks
+---
+- name: "My First playbook"   
+  hostes: localhost
+  # become: yes
+  tasks:
+  - name: "test connectivity"
+    ping: 
