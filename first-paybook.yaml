@@ -3,8 +3,8 @@
 # cd /ect/ansible/playbooks
 ---
 - name: "My First playbook"   
-  hostes: localhost
-  
+  hosts: localhost
+
   tasks:
   - name: "test connectivity"
     ping: 
