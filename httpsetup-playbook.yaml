@@ -9,11 +9,11 @@
      state: present
   - name: start apache2
     service:
-     name: apache2
+     name: httpd
      state:  started  
   - name:  Open port 80 for http access
     firewalld:
-      service: apache2
+      service: httpd
       permanent: true
       state: enabled
   - name:   Restart firwalld service to load firewall changes
