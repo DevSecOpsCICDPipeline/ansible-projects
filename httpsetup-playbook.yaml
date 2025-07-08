@@ -19,5 +19,5 @@
   - name:   Restart firwalld service to load firewall changes
     service:
      name: firewalld
-     state: reload
+     state: reloaded
 
