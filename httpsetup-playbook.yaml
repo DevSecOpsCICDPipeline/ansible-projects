@@ -15,7 +15,7 @@
     firewalld:
       service: apache2
       permanent: true
-      state: enable
+      state: enabled
   - name:   Restart firwalld service to load firewall changes
     service:
      name: firewalld
