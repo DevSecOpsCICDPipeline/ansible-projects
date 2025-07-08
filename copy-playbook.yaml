@@ -6,7 +6,7 @@
   - name: Copying file
     become: true
     copy:
-     scr: /home/ganislp/some.cfg
+     src: /home/ganislp/some.cfg
      dest: /tmp
      owner: ganislp
      group: ganislp
