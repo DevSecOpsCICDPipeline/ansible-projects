@@ -1,0 +1,23 @@
+---
+- name: Setup httpd and open firewall port
+  hosts: all
+
+  tasks: 
+  - name: Install apache packages
+    apt:
+     name: httpd
+     state: present
+  - name: start httpd
+    service:
+     name: httpd
+     state:  started  
+  - name:  Open port 80 for http access
+    firewalld:
+      service: http
+      premanent: true
+      state: enable
+  - name:   Restart firwalld service to load firewall changes
+    service:
+     name: firewalld
+     state: reload
+
