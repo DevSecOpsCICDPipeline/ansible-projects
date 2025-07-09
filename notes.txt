@@ -39,3 +39,23 @@ ansible-playbook httpsetup-playbook.yaml -t s-apache2
 ansible-playbook httpsetup-playbook.yaml  --list-tags
 
 ansible-playbook httpsetup-playbook.yaml --start-at-task "Install apache packages"
+
+--------------------variables------------------
+Inventory file
+
+[abc:vars]
+fooservers=foo.abc.example.com
+
+------------------Handlers-------------------------------
+reload,start,restart,stop service when notified
+
+notify
+handlers
+-------------------Conditions---------------------------------
+WHEN
+
+
+
+
+
+
