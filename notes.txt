@@ -21,3 +21,13 @@ ansible all -m shell -a "systemctl status httpd"
 ansible all -m apt -a "name=httpd state=absent"
 
 ansible all -m shell -a "apt remove httpd"
+
+ansible all -m user -a "name=sl home=/home/sl shell=/bin/bash state=present"
+
+ansible all -m user -a "name=sl group=ganislp"
+
+ansible all -m user -a "name=sl home=/home/sl shell=/bin/bash state=absent"
+
+ansible all -m setup
+
+ansible client1 -a "/sbin/reboot"
