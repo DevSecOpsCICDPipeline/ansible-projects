@@ -1,3 +1,23 @@
 ansible-playbook http.yaml --start-at-task 'Install telnet'
 
 ansible-galaxy collection install community.general
+
+ansible localhost -m ping -a 
+
+ansible all -m file -a "path=/home/ganislp/adhoc1 state=touch mode=700"
+
+ansible all -m file -a "path=/home/ganislp/adhoc1 state=absent"
+
+ansible all -m copy -a "src=/tmp/adh02 dest=/home/ganislp/adh02"
+
+ansible all -m apt -a "name=telnet state=present"
+
+ansible all -m service -a "name=httpd state=started"
+
+ansible all -m service -a "name=httpd state=started enabled=yes"
+
+ansible all -m shell -a "systemctl status httpd"
+
+ansible all -m apt -a "name=httpd state=absent"
+
+ansible all -m shell -a "apt remove httpd"
