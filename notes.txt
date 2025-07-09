@@ -31,3 +31,9 @@ ansible all -m user -a "name=sl home=/home/sl shell=/bin/bash state=absent"
 ansible all -m setup
 
 ansible client1 -a "/sbin/reboot"
+
+---------------------tags------------------------
+
+ansible-playbook httpsetup-playbook.yaml -t i-apache2 
+ansible-playbook httpsetup-playbook.yaml -t s-apache2 
+ansible-playbook httpsetup-playbook.yaml  --list-tags
