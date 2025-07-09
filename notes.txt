@@ -37,3 +37,5 @@ ansible client1 -a "/sbin/reboot"
 ansible-playbook httpsetup-playbook.yaml -t i-apache2 
 ansible-playbook httpsetup-playbook.yaml -t s-apache2 
 ansible-playbook httpsetup-playbook.yaml  --list-tags
+
+ansible-playbook httpsetup-playbook.yaml --start-at-task "Install apache packages"
