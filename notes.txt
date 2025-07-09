@@ -53,6 +53,21 @@ notify
 handlers
 -------------------Conditions---------------------------------
 WHEN
+ansible_os_family
+
+ansible localhost -m setup
+
+--------------loop---------------------
+loop and with_*
+for loop
+
+for u in j k m ; do useradd $u; done
+
+for p in ftp telnet htop; yum install $p -y; done
+
+ansible-vault create httpy.yaml
+
+ansible-playbook httpy.yaml --ask-vault-pass
 
 
 
