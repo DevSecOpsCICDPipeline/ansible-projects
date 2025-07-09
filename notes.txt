@@ -69,6 +69,16 @@ ansible-vault create httpy.yaml
 
 ansible-playbook httpy.yaml --ask-vault-pass
 
+ansible-vault encrypt_string httpd
+
+ansible-vault encrypt/create outputbystring.yml
+
+vars:
+  secrect: !vault |
+
+
+  ansible-playbook outputbystring.yml --ask-vault-pass
+
 
 
 
